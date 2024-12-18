@@ -18,32 +18,32 @@ public class User {
     }
 
     public String getUsername() {
-        return username;
+    	return username;
     }
 
     public String getPassword() {
-        return password;
+    	return password;
     }
 
     public int getAccountId() {
-        return accountId;
+    	return accountId;
     }
 
     public BankAccount getBankAccount() {
-        return bankAccount;
+    	return bankAccount;
     }
 
     public String hashPassword(String password) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            byte[] hashedBytes = md.digest(password.getBytes());
-            StringBuilder sb = new StringBuilder();
-            for (byte b : hashedBytes) {
-                sb.append(String.format("%02x", b));
-            }
-            return sb.toString();
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException("Hashing algorithm not found", e);
-        }
-    }
+    	try {
+        	MessageDigest md = MessageDigest.getInstance("SHA-256");
+        	byte[] hashedBytes = md.digest(password.getBytes());
+        	StringBuilder sb = new StringBuilder();
+        	for (byte b : hashedBytes) {
+            	sb.append(String.format("%02x", b));
+        	}
+        	return sb.toString();
+    	} catch (NoSuchAlgorithmException e) {
+        	throw new RuntimeException("Hashing algorithm not found", e);
+    	}
+   }
 }

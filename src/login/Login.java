@@ -1,4 +1,3 @@
-// Login.java
 package login;
 
 import java.awt.EventQueue;
@@ -72,7 +71,7 @@ public class Login extends JFrame {
         registerButton.setBounds(439, 222, 129, 51);
         registerButton.addActionListener(e -> {
             Register registerForm = new Register();
-            registerForm.setVisible(true); // Fixed: Use setVisible(true) instead of undefined displayRegisterForm
+            registerForm.setVisible(true); 
             dispose();
         });
         contentPane.add(registerButton);
